@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primaryTextcolor: #009dff;
+  --secondaryTectcolor: #656d72;
+
+  --borderColor: #f1f1f1;
+  --lineColor: #9d9d9d;
+
+  --PrimaryBackgroundColor: #fff;
+  --SecondaryBackgroundColor: #fbfbfb;
+  --thirdBackgroundColor: #e0afa7;
+
+  --primaryIconColor: #978f8c;
+  --primaryIconColorHover: #5d51e8;
+
+  --sectionPandding: 6rem 0;
+  --itemBorderRadius: 0.7rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: #000000;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1, 9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+  color: (var(--secondaryTectcolor));
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 90%;
+  }
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  background: white;
+  border: 1.5px solid var(--borderColor);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: rgb(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--secondaryTectcolor);
+  position: relative;
+  padding-left: 40px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.pre-title::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: var(--primaryTextcolor);
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--primaryTextcolor);
+}
+
+.burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7xp;
+  transition: all 0.3s;
+  z-index: 99;
+}
+
+.burger {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+/* logo */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.hero-left {
+  max-width: 50%;
+}
+
+.hero-right {
+  max-width: 50%;
+}
+
+.pre-title {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.hero-name {
+  font-size: 36px;
+  color: #020202;
+  margin-bottom: 20px;
+}
+
+.hero-name span {
+  color: #ff4500; /* Warna teks untuk bagian tambahan nama */
+}
+
+.hero-left p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* and hero */
+
+#services {
+  background-color: var(--SecondaryBackgroundColor);
+  padding: var(--sectionPandding);
+}
+
+.services .pre-title {
+  margin: 0 auto;
+}
+
+.services-title {
+  text-align: center;
+}
+
+.services {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--PrimaryBackgroundColor);
+  border-radius: var(--itemBorderRadius);
+}
+
+.services h4,
+h1 {
+  margin: 1.5rem 0;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #000000;
+}
+
+.service-icon {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.servicesi-icon svg {
+  fill: var(--primaryIconColor);
+}
+
+#portofolios {
+  padding: var(--sectionPandding);
+}
+
+.portofolios h1 {
+  color: #ff4500; /* Warna teks untuk bagian tambahan nama */
+}
+
+.galeri {
+  border-radius: var(--itemBorderRadius);
+  overflow: hidden;
+  text-align: center;
+}
+
+.galeri-cover {
+  height: 250px;
+}
+
+.galeri-cover img {
+  width: 50%;
+  height: 95%;
+  object-fit: cover;
+}
+
+/* skills and hobi */
+#skills {
+  padding: var(--sectionPandding);
+  background: var(--SecondaryBackgroundColor);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+.hobi {
+  display: flex;
+  gap: 1rem;
+}
+
+.hobi .line {
+  padding: 0 0.7rem;
+}
+
+.hobi .line div {
+  width: 2px;
+  height: 100%;
+  background: var(--borderColor);
+  position: relative;
+}
+
+.hobi-info p {
+  margin: 0.6rem 0 1.4rem;
+}
+/* and skills dan hobi */
+
+/* titik di garis */
+.hobi .line div::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--borderColor);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+}
+
+.skills-right ul {
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+/* and titik di garis */
+
+/* contact */
+#contact {
+  padding: var(--sectionPandding);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+}
+
+.contact-form div {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  font-family: "Roboto", sans-serif;
+  background: var(--SecondaryBackgroundColor);
+  border: 1px solid var(--borderColor);
+  border-radius: 3px;
+  resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9d9fa1;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.75rem 1.3rem;
+  background-color: var(--primaryIconColor);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: var(--primaryIconColorHover);
+}
+
+.contact-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+  background: var(--thirdBackgroundColor);
+  width: 53px;
+  height: 53px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-item-detail h4 {
+  margin-bottom: 0.6rem;
+}
+
+.contact h4 {
+  color: #ff4500;
+}
+.contact p {
+  color: #000000;
+}
+/* and contact */
+
+/* footer */
+footer {
+  padding: 4rem 0;
+  background: var(--SecondaryBackgroundColor);
+  text-align: center;
+}
+
+.footer-icons {
+  margin-bottom: 1rem;
+}
+
+.footer-icons a {
+  margin: 0 0.5rem;
+}
+
+.footer-icons svg {
+  fill: #3e3f40;
+}
+
+.dark-mode .text-light {
+  color: #fff; /* Ubah sesuai dengan warna teks yang diinginkan di mode gelap */
+}
+/* and footer */
+
+/* dark-mode */
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+  padding: 20px;
+}
+
+.dark-mode {
+  background-color: #333;
+  text: #fff;
+}
+
+#darkModeToggle {
+  background-image: url("images/moon-outline.svg");
+  background-size: contain; /* Sesuaikan dengan ukuran gambar */
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 12px 25px; /* Sesuaikan dengan kebutuhan */
+  border: none;
+  cursor: pointer;
+  color: white; /* Warna teks */
+  font-size: 16px; /* Ukuran teks */
+}
+
+/* Styles for light text in dark mode */
+
+/* and dark-mode */
